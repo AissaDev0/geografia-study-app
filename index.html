@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repàs de Geografia | Sector Terciari i Transport</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-glass"></div>
+    <main class="app-container">
+        <header class="app-header">
+            <h1>🎒 Geografia: El Sector Terciari i el Transport</h1>
+            <p>App interactiva d'estudi i avaluació per a l'examen</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="apunts">📖 Els Apunts</button>
+            <button class="tab-btn" data-tab="quiz">🧠 Fes el Quiz!</button>
+        </div>
+
+        <section class="tab-content active" id="apunts">
+            <!-- Theory content derived from the extracted notes -->
+            <div class="card">
+                <h2>1. El Sector Terciari i la Seva Importància</h2>
+                <p>El <strong>sector terciari</strong> és molt heterogeni i inclou activitats que no produeixen béns materials (comerç, transport, educació, sanitat).</p>
+                <ul>
+                    <li><strong>Terciarització:</strong> Procés pel qual la riquesa i l'ocupació d'un país es basen fonamentalment en serveis (comú en països desenvolupats).</li>
+                </ul>
+                <h3>Classificació dels serveis:</h3>
+                <ul>
+                    <li><strong>Socials:</strong> Sanitat, educació, administració (bàsics per al benestar).</li>
+                    <li><strong> A les empreses:</strong> Recerca, gestió, publicitat.</li>
+                    <li><strong>Al consumidor:</strong> Comerç detallista, turisme, oci.</li>
+                    <li><strong>De distribució:</strong> Transport, telecomunicacions.</li>
+                </ul>
+                <h3>Públics o Privats:</h3>
+                <p>Els públics són de l'Estat (amb impostos), els privats d'empreses (cerquen benefici) i existeix el <strong>Tercer Sector</strong> (ONGs sense ànim de lucre i amb donacions).</p>
+            </div>
+
+            <div class="card">
+                <h2>2. El Transport com a Sector Estratègic</h2>
+                <p>Té tres funcions clau:</p>
+                <ul>
+                    <li><strong>Econòmica:</strong> Connecta sectors de producció amb consumidors.</li>
+                    <li><strong>Política:</strong> Vertebra territoris (gran importància d'estrets i canals).</li>
+                    <li><strong>Social:</strong> Moviment de persones i intercanvi cultural.</li>
+                </ul>
+                <p>Les <strong>Xarxes de transport</strong> estan formades per <em>nodes</em> (ports, aeroports) i <em>eixos/rutes</em>. Determinen l'<strong>accessibilitat</strong>.</p>
+            </div>
+
+            <div class="card">
+                <h2>3. Sistemes de Transport</h2>
+                <ul>
+                    <li><strong>Marítim/Fluvial:</strong> Molt barat per a mercaderies pesants però lent i contaminant (penseu que es mouen 10M de productes anuals en contenidors).</li>
+                    <li><strong>Carretera:</strong> Alta flexibilitat i accessibilitat porta a porta, però molta congestió i alta sinistralitat.</li>
+                    <li><strong>Ferroviari (Tren):</strong> Ràpid i segur, però demana molta inversió d'infraestructura rígida (les vies).</li>
+                    <li><strong>Aeri:</strong> El més ràpid (immediatesa global), però molt car d'invertir i altament contaminant acústicament.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>4. La Revolució de la Mobilitat i la Logística</h2>
+                <ul>
+                    <li><strong>Intermodalitat:</strong> Ús de diferents mitjans de transport en un sol viatge (ex: metro + tren de rodalies).</li>
+                    <li><strong>SIT (Sistemes Intel·ligents de Transport):</strong> Sistemes com panells informatius o conducció automàtica per millorar la seguretat gràcies a la I+D+i.</li>
+                </ul>
+                <h3>Logística i Transport de Mercaderies:</h3>
+                <p>Les <strong>plataformes logístiques</strong> són grans naus d'emmagatzematge en zones ben comunicades.<br> L'<strong>última milla</strong> és l'enviament final al domicili del comprador sent el gran repte reduir el temps i el volum de trànsit.</p>
+            </div>
+        </section>
+
+        <section class="tab-content" id="quiz">
+            <div class="quiz-container">
+                <div id="quiz-header">
+                    <h2>Preparat/da per posar-te a prova?</h2>
+                    <p>Contesta aquestes 10 preguntes clau sobre els apunts i descobreix si estàs preparat per l'examen.</p>
+                    <button class="start-btn" id="start-btn">Començar el Test</button>
+                </div>
+                <div id="quiz-body" class="hidden">
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                    <div class="question-number">Pregunta <span id="current-q">1</span> de <span id="total-q">10</span></div>
+                    <h3 id="question-text" class="question-text"></h3>
+                    <div id="options-container" class="options-grid"></div>
+                    <button id="next-btn" class="next-btn hidden" disabled>Següent Pregunta ➔</button>
+                </div>
+                <div id="quiz-results" class="hidden text-center">
+                    <h2>🎉 Test Finalitzat!</h2>
+                    <div class="score-circle">
+                        <span id="score-text">0/10</span>
+                    </div>
+                    <p id="score-message">Calculant nota...</p>
+                    <button class="start-btn mt-4" id="retry-btn">Tornar a intentar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
